@@ -1,0 +1,310 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.flex-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  background-color: #ffffff;
+}
+
+.first {
+  background: linear-gradient(rgba(167, 82, 104, 0.8), rgba(167, 82, 104, 0.8)),
+    url(assets/picture1.jpg), 100% 100% no-repeat;
+  background-size: cover;
+  flex: 50%;
+}
+.content {
+  float: right;
+  color: white;
+  width: 43%;
+  height: 60%;
+  margin: 25% 5%;
+  text-align: right;
+}
+
+.title {
+  text-align: center;
+  height: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 38px;
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+
+.info {
+  height: 30%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 30%;
+}
+
+.addInfo {
+  height: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.second {
+  width: 100%;
+  flex: 50%;
+}
+
+.form-content {
+  float: left;
+  color: white;
+  width: 45%;
+  height: 60%;
+  margin: 15% 5% 25% 5%;
+}
+.form-img {
+  width: 80%;
+  margin: 0% 10% 10% 10%;
+  height: 15%;
+  text-align: center;
+}
+.radio-buttons {
+  display: flex;
+  width: 50%;
+  margin: 2% 1% 4% 0%;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+.password-container {
+  width: 96%;
+  margin: 2% 2%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #a6a6a6;
+  padding: 4%;
+  height: 40px;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+label,
+.required:after {
+  width: 96%;
+  margin: 1% 2%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+input[type="button"] {
+  flex: 10%;
+  background-color: white;
+  color: #c6c6c6;
+  height: 20px;
+  box-sizing: border-box;
+  border-style: none;
+}
+
+input[type="password"] {
+  flex: 90%;
+  padding: 4%;
+  height: 35px;
+  border-style: none;
+  box-sizing: border-box;
+}
+
+.birthday-content {
+  display: flex;
+  justify-content: center;
+}
+
+.month {
+  flex: 3 1 50%;
+  height: 40px;
+}
+
+.day {
+  flex: 1 1 20%;
+  height: 40px;
+}
+
+.year {
+  flex: 2 1 30%;
+  height: 40px;
+}
+
+.form {
+  width: 94%;
+  margin: 3%;
+  height: 85%;
+}
+
+@media screen and (max-width: 1919px) {
+  .first {
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    float: none;
+    color: white;
+    width: 74%;
+    height: 80%;
+    margin: 20% 13% 0% 13%;
+    text-align: center;
+  }
+  .title {
+    height: 10%;
+    margin-top: 0%;
+    margin-bottom: 20%;
+  }
+  .info {
+    height: 30%;
+    margin-bottom: 20%;
+  }
+  .addInfo {
+    height: 15%;
+  }
+
+  .second {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-content {
+    float: left;
+    color: white;
+    width: 56%;
+    height: 86%;
+    margin: 5% 22% 9% 22%;
+  }
+
+  .form-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-img img {
+    width: 40%;
+  }
+  .radio-buttons {
+    display: flex;
+    width: 60%;
+    margin: 2% 1% 4% 0%;
+  }
+}
+
+@media screen and (max-width: 1049px) {
+  .second {
+    width: 100%;
+    height: 100%;
+    flex: 50%;
+  }
+  .first {
+    display: none;
+  }
+  .form-content {
+    float: left;
+    color: white;
+    width: 90%;
+    height: 100%;
+    margin: 5% 5%;
+  }
+  .form-img {
+    height: 8%;
+    margin-top: 5%;
+  }
+  .form-img img {
+    width: 40%;
+  }
+  .radio-buttons {
+    display: flex;
+    width: 70%;
+    margin: 4% 30% 4% 0%;
+  }
+  label {
+    font-size: 12px;
+  }
+  .password-container {
+    width: 96%;
+    height: 70%;
+  }
+  .birthday-content {
+    display: inline;
+  }
+
+  select.month {
+    height: 45px;
+
+    font-size: 18px;
+  }
+  input[type="text"].day {
+    width: 40%;
+    font-size: 18px;
+    margin-right: 4%;
+  }
+
+  input[type="text"].year {
+    width: 52%;
+    font-size: 18px;
+    margin: 0;
+  }
+  .form {
+    height: 87%;
+  }
+}
+
+.form-item {
+  margin: 1% 0%;
+}
+
+input:required {
+  border: 1px solid #ea4989;
+}
+
+select {
+  padding: 1%;
+}
+
+.requiredName:after,
+.requiredPassword:after,
+.requiredEmail:after {
+  float: right;
+  margin-right: 3%;
+  width: auto;
+  content: "Please supply a full name";
+  color: #ea4989;
+}
+
+.requiredPassword:after {
+  content: "Please supply a password";
+}
+
+.requiredEmail:after {
+  content: "Please supply an email";
+}
+
+button {
+  width: 96%;
+  height: 40px;
+  margin: 4% 2%;
+  background: #8889b9;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
